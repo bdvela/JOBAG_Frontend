@@ -395,7 +395,8 @@
       "lastname": "villefa",
       "age": 20,
       "id": 6
-
+    }
+  ],
   "professional_profile" : [
     {
       "id": 1,
@@ -433,6 +434,17 @@
       "name": "Portugués",
       "level": "2"
 
+    }
+  ],
+  "users" : [
+    {
+      "id": 1,
+      "firstname": "Alonso",
+      "lastname": "Yuen",
+      "email": "alonso.yuen@gmail.com",
+      "number": 1,
+      "password": "123456",
+      "document": "09812399"
     }
   ]
 }

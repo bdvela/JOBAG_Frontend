@@ -17,7 +17,9 @@
       <h2>Detalles del aviso</h2>
       <p>{{jobInfo.description}}</p>
       <br>
-      
+
+      <iframe width="560" height="315" src="{{ jobInfo.url_video }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
       <div class="job-info-button">
         <button mat-button [routerLink]="['newpostulation']">POSTULARME</button>
       </div>

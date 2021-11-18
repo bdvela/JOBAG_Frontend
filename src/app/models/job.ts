@@ -6,6 +6,7 @@ export interface Job {
   salary: number,
   direction: string,
   type: string,
-  title: string
+  title: string,
+  url_video: string
 
 }

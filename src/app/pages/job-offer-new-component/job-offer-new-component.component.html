@@ -71,6 +71,15 @@
         </mat-form-field>
       </form>
 
+      <form (submit)="jobOfferData">
+        <mat-form-field appearance="outline" class="profile-form-input">
+          <mat-hint>
+            Ingrese el URL del video (subido a YouTube) explicando la oferta de trabajo
+          </mat-hint>
+          <input matInput matAutosizeMinRows=4 mat-calendar-body required="urlVideo" name="urlVideo" [(ngModel)]="jobOfferData.url_video" placeholder="direction">
+        </mat-form-field>
+      </form>
+
       <form >
         <button (click)="AddJobOfferNew()" (click)="openDialog()"  class="mat-focus-indicator mat-button mat-button-base">
           Guardar Cambios

@@ -27,6 +27,7 @@ export class MyadInformationComponent implements OnInit {
   type: string='';
   description: string='';
   final_date_offer: string='';
+  url_video: string='';
   constructor(private location: Location,private route:ActivatedRoute, private jobs_service : JobsApiService) {
     this.route.params.subscribe(params=>this.jobId=params.jobofferId)
     this.route.params.subscribe(params=>this.employeerId=params.employeerId)
@@ -43,10 +44,10 @@ export class MyadInformationComponent implements OnInit {
       this.jobInfo=response;
       this.final_date_offer=this.jobInfo.final_date_offer;
       console.log(this.jobInfo);
-      
+
     })
   }
-  goBack() : void{    
+  goBack() : void{
     this.location.back();
   }
   handleModify() : void{
@@ -61,12 +62,13 @@ export class MyadInformationComponent implements OnInit {
       salary:this.jobInfo.salary,
       direction:this.direction,
       type:this.type,
-      title:this.title
+      title:this.title,
+      url_video:this.url_video
     }
     this.jobs_service.updateJobByEmployeerId(this.jobId,this.employeerId,this.jobUpdated).subscribe((response: any) => {
       console.log(response)
      });
      this.location.back()
-    
+
   }
 }
