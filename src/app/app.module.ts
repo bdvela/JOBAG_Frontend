@@ -75,7 +75,7 @@ import { MypostulantionInformationComponent } from './pages/mypostulantion-infor
 import {JobOfferNewComponentComponent} from "./pages/job-offer-new-component/job-offer-new-component.component";
 import { AuthInterceptor } from './helpers/auth.interceptor';
 import { DialogPostulationSendSuccessfullyComponent } from './pages/dialog-postulation-send-successfully/dialog-postulation-send-successfully.component';
-
+import { YouTubePlayerModule } from "@angular/youtube-player";
 
 
 @NgModule({
@@ -158,6 +158,7 @@ import { DialogPostulationSendSuccessfullyComponent } from './pages/dialog-postu
     MatDatepickerModule,
     MatDialogModule,
     MatMenuModule,
+    YouTubePlayerModule
   ],
 
 

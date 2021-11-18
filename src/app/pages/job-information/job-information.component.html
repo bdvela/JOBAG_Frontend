@@ -18,7 +18,13 @@
       <p>{{jobInfo.description}}</p>
       <br>
 
-      <iframe width="560" height="315" [src]="getVideoIframe(jobInfo.url_video)" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <youtube-player
+        videoId="DXxQWBHcDpQ"
+        suggestedQuality="highres"
+        [height]="250"
+        [width]="500"
+        [startSeconds]="0">
+      </youtube-player>
 
       <div class="job-info-button">
         <button mat-button [routerLink]="['newpostulation']">POSTULARME</button>

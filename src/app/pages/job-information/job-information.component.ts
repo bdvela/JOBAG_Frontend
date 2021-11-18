@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Job } from 'src/app/models/job';
 import { JobsApiService } from 'src/app/services/jobs-api.service';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-job-information',
@@ -13,7 +12,7 @@ export class JobInformationComponent implements OnInit {
   jobId:number=0;
   postulantId!: number
   jobInfo: Job;
-  constructor(private route:ActivatedRoute, private jobs_service : JobsApiService, private _sanitizer: DomSanitizer) {
+  constructor(private route:ActivatedRoute, private jobs_service : JobsApiService) {
     this.route.params.subscribe(params=>this.jobId=params.jobofferId)
     this.route.params.subscribe(params=>this.postulantId=params.postulantId)
     this.jobInfo={} as Job;
@@ -37,17 +36,4 @@ export class JobInformationComponent implements OnInit {
     });
 
   }
-
-  getVideoIframe(url) {
-    var video, results;
-
-    if (url === null) {
-      return '';
-    }
-    results = url.match('[\\?&]v=([^&#]*)');
-    video   = (results === null) ? url : results[1];
-
-    return this._sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + video);
-  }
-
 }
