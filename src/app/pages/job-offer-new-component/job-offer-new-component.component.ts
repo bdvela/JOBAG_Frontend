@@ -35,7 +35,7 @@ export class JobOfferNewComponentComponent implements OnInit {
   }
 
   AddJobOfferNew(): void{
-    const newJobOffer = {description: this.jobOfferData.description, begin_date_offer: this.jobOfferData.begin_date_offer, final_date_offer: this.jobOfferData.final_date_offer, salary: this.jobOfferData.salary, direction: this.jobOfferData.direction, type: this.jobOfferData.type, title: this.jobOfferData.title, urlVideo: this.jobOfferData.url_video };
+    const newJobOffer = {description: this.jobOfferData.description, begin_date_offer: this.jobOfferData.begin_date_offer, final_date_offer: this.jobOfferData.final_date_offer, salary: this.jobOfferData.salary, direction: this.jobOfferData.direction, type: this.jobOfferData.type, title: this.jobOfferData.title, url_video: this.jobOfferData.url_video };
     this.jobOfferApiService.addJobOffer(newJobOffer, this.employeerId).subscribe((response: any) => {console.log(response)});
   }
 
