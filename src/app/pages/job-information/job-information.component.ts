@@ -36,4 +36,17 @@ export class JobInformationComponent implements OnInit {
     });
 
   }
+
+  getVideoId(url : string) {
+    var video_id, results;
+
+    if (url === null) {
+      return '';
+    }
+    results = url.match('[\\?&]v=([^&#]*)');
+    video_id = (results === null) ? url : results[1];
+
+    return video_id;
+  }
+
 }
