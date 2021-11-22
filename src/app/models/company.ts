@@ -14,5 +14,6 @@ export interface Company{
   documentEmployeer: string,
   idSector: number,
   nameSector: string,
-  descriptionSector: string
+  descriptionSector: string,
+  url_video: string
 }

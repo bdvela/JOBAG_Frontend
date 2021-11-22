@@ -28,6 +28,7 @@ export class ModifyCompanyProfileComponent implements OnInit {
   newlogo!: string;
   newruc!: number;
   newdireccion!: string;
+  new_url_video!: string;
 
   ngOnInit(): void {
     this.getAllCompanies();
@@ -69,7 +70,8 @@ export class ModifyCompanyProfileComponent implements OnInit {
       documentEmployeer: this.companyData.documentEmployeer,
       idSector: this.companyData.idSector,
       nameSector: this.companyData.nameSector,
-      descriptionSector: this.companyData.descriptionSector
+      descriptionSector: this.companyData.descriptionSector,
+      url_video: this.new_url_video
     };
 
     this.companiesApi.updateCompany(this.employeerId, this.companyData.idSector, newCompany)

@@ -42,6 +42,13 @@
         </mat-form-field>
       </form>
 
+      <form>
+        <mat-form-field appearance="outline" class="profile-form-input">
+          <mat-hint> Link del video (subido a YouTube) </mat-hint>
+          <input matInput matAutosizeMinRows=4 required name="url_video" [(ngModel)]="new_url_video" placeholder="https://www.youtube.com/watch?v=PVKQDmdjMDs">
+        </mat-form-field>
+      </form>
+
       <br>
     </div>
     <br><br>
