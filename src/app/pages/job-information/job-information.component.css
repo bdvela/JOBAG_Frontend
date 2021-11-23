@@ -50,6 +50,11 @@
     width: 100%;
     padding: 5px 15px;
 }
+.job-video{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
 
 @media screen and (max-width:768px) {
     .job-information-container{
