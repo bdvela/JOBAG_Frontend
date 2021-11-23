@@ -1,69 +1,68 @@
-.companies_container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 70px;
-  height: 90vh;
-}
-.companies-container-header{
-  text-align: center;
-  margin: 50px auto;
-}
-.companies-container-header-input{
+.company-list-container{
   width: 100%;
-  margin: 20px 0;
 }
-.companies-container-header button{
-  width: 200px;
-  padding:10px 0;
+.company-list-container-form-input input{
+  width: 400px;
+  height: 30px;
+}
+.company-list-container-form button{
+  margin-left: 30px;
+  border: 0;
   background: #1955AE;
   color: white;
-  outline: none;
-  border: 0;
+  padding: 0 20px;
+}
+.company-list-container-list ul{
+  list-style: none;
+  padding:0;
+}
+.company-item{
   border-radius: 10px;
-  cursor: pointer;
-  box-shadow: 1px 8px 17px -7px rgba(0,0,0,0.75);
-}
-
-.companies-container-header h1{
-  font-weight: 700;
-  font-size: 3em;
-  color: #1955AE;
-}
-.companies-container-content{
-  width: 90%;
-  margin: 100px auto;
-  display: flex;
-}
-.list-companies{
-  width: 50%;
-}
-@media screen and (max-width:768px){
-  .companies-container-content{
-    flex-direction: column;
-  }
-  .filter-companies{
-    width: 100%;
-  }
-  .list-companies{
-    width: 100%;
-    margin: 0 auto;
-  }
-}
-
-.postulation-item{
-  display: flex;
-  justify-content: space-between;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0px 3px 6px -2px #000000;
   margin: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 3px 6px -2px #000000;
+  padding: 15px;
   cursor: pointer;
   transition: all 500ms;
 }
-.postulation-item:hover{
+.company-item:hover{
   transform: scale(1.05);
 }
-.postulation-item h2{
+.company-item-text-left h2{
   color: #1955AE;
+  font-weight: 700;
+}
+.company-item-text-right img{
+  width: 50px;
+  height: 50px;
+}
+.company-item-text-right-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width:768px){
+  .company-list-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .company-item{
+    width: 100%;
+  }
+  .company-list-container-form{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+  }
+  .company-list-container-form input{
+    width: 100%
+  }
 }

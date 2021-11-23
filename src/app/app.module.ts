@@ -77,6 +77,7 @@ import { AuthInterceptor } from './helpers/auth.interceptor';
 import { DialogPostulationSendSuccessfullyComponent } from './pages/dialog-postulation-send-successfully/dialog-postulation-send-successfully.component';
 import { YouTubePlayerModule } from "@angular/youtube-player";
 import { ListCompaniesComponent } from "./pages/list-companies/list-companies.component";
+import { CompanyInformationComponent } from './pages/company-information/company-information.component';
 
 
 @NgModule({
@@ -128,6 +129,7 @@ import { ListCompaniesComponent } from "./pages/list-companies/list-companies.co
     MypostulantionInformationComponent,
     DialogPostulationSendSuccessfullyComponent,
     ListCompaniesComponent,
+    CompanyInformationComponent,
 
 
   ],

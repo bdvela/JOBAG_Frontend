@@ -30,6 +30,11 @@ export class CompaniesApiService {
     return this.http.get(`${this.url}`).pipe(retry(2), catchError(this.handleError));
   }
 
+  getCompanyById(id: number): Observable<Company>{
+    return this.http.get<Company>(`${this.url}/${id}`)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+
 }
 
 

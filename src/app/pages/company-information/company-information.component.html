@@ -1,0 +1,31 @@
+<app-main-nav-postulant>
+  <div class="company-information-container">
+    <div class="company-item">
+      <div class="company-item-text-left">
+        <span>{{companyInfo.direccion}}</span>
+        <h2>{{companyInfo.name}}</h2>
+      </div>
+      <div class="company-item-text-right">
+        <div class="company-item-text-right-img">
+        </div>
+        <br>
+        <span></span>
+      </div>
+    </div>
+    <div class="company-info">
+      <h2>Sobre la empresa</h2>
+      <p>{{companyInfo.description}}</p>
+      <br>
+
+      <youtube-player
+        class="company-video"
+        videoId="{{ getVideoId(companyInfo.url_video) }}"
+        suggestedQuality="highres"
+        [height]="250"
+        [width]="500"
+        [startSeconds]="0">
+      </youtube-player>
+
+    </div>
+  </div>
+</app-main-nav-postulant>

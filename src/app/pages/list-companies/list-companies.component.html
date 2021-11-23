@@ -1,23 +1,22 @@
 <app-main-nav-postulant>
-<div class="companies-container-content">
-
-<div class="list-companies">
-  <div class="list-companies-container">
-    <div *ngFor="let company of companies" class="company-item" [routerLink]="['/','companydetails',company.id]">
-      <div class="company-item-text-left">
-        <span>{{company.direccion}}</span>
-        <h2>{{company.name}}</h2>
-        <span></span>
-      </div>
-      <div class="company-item-text-right">
-        <div class="company-item-text-right-img">
-        </div>
-        <br>
-        <span></span>
-      </div>
+  <div class="company-list-container">
+    <div class="company-list-container-list">
+      <ul>
+        <li class="company-item" *ngFor="let company of companies" [routerLink]="['company',company.id]">
+          <div class="company-item-text-left">
+            <span>{{company.direccion}}</span>
+            <h2>{{company.name}}</h2>
+            <span></span>
+          </div>
+          <div class="company-item-text-right">
+            <div class="company-item-text-right-img">
+            </div>
+            <br>
+            <span></span>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
-</div>
 
-</div>
 </app-main-nav-postulant>
