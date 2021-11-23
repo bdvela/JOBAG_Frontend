@@ -50,7 +50,7 @@ const routes: Routes = [
   {path:'postulant/:postulantId/modify-personal-information-postulant', component : ModifyPersonalInformationPostulantComponent},
   {path:'joboffer/:jobofferId/employeers/:employeerId', component: MyadInformationComponent},
   {path:'postulant/:postulantId/list-companies', component: ListCompaniesComponent},
-  {path:'postulant/:postulantId/list-companies/:companyId', component: CompanyInformationComponent},
+  {path:'postulant/:postulantId/list-companies/company/:companyId', component: CompanyInformationComponent},
 //////////////////////////////////////////////////////////////////////////////////////////////////rutas de toolbarpostulante
   {path:'employeer/:employeerId', component: MyadsComponent},   //HOME EMPLEADOR
 
