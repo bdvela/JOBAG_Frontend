@@ -29,6 +29,7 @@ import {TermsAndConditionsComponent} from "./pages/terms-and-conditions/terms-an
 import { MypostulantionInformationComponent } from './pages/mypostulantion-information/mypostulantion-information.component';
 import {DialogJobNewComponent} from "./pages/dialog-job-new/dialog-job-new.component";
 import {ListCompaniesComponent} from "./pages/list-companies/list-companies.component";
+import {CompanyInformationComponent} from "./pages/company-information/company-information.component";
 
 const routes: Routes = [
 
@@ -49,6 +50,7 @@ const routes: Routes = [
   {path:'postulant/:postulantId/modify-personal-information-postulant', component : ModifyPersonalInformationPostulantComponent},
   {path:'joboffer/:jobofferId/employeers/:employeerId', component: MyadInformationComponent},
   {path:'postulant/:postulantId/list-companies', component: ListCompaniesComponent},
+  {path:'postulant/:postulantId/list-companies/:companyId', component: CompanyInformationComponent},
 //////////////////////////////////////////////////////////////////////////////////////////////////rutas de toolbarpostulante
   {path:'employeer/:employeerId', component: MyadsComponent},   //HOME EMPLEADOR
 
