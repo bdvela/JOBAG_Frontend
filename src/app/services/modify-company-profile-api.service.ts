@@ -26,16 +26,26 @@ export class ModifyCompanyProfileApiService {
     return throwError('Something happened with request, please try again later.');
   }
 
+  getEmployeerbyId(id:number) {
+    return this.http.get(`${this.url}/${id}`)
+      .pipe(retry(0), catchError(this.handleError));
+  }
+
   getCompaniesByEmployeerId(employeerId: number) {
     return this.http.get(`${this.url}/${employeerId}/companys`)
       .pipe(retry(2), catchError(this.handleError));
   }
 
-
   updateCompany(employeerId:number, sectorId: number, item: Company): Observable<Company> {
     return this.http.put<Company>(`${this.url}/${employeerId}/sector/${sectorId}/companys`, JSON.stringify(item), this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
+
+  addCompany(employeerId:number, sectorId: number, item: Company): Observable<Company> {
+    return this.http.post<Company>(`${this.url}/${employeerId}/sector/${sectorId}/companys`, JSON.stringify(item), this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+
 }
 
 
