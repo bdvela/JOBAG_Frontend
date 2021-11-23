@@ -50,15 +50,24 @@
       </form>
 
       <form>
-          <input type="hidden" matInput matAutosizeMinRows=4 name="sectorId" [(ngModel)]="companyData.idSector" ng-value="1">
+        <mat-form-field appearance="outline" class="profile-form-input">
+          <mat-hint> ID del sector </mat-hint>
+          <input matInput matAutosizeMinRows=4 required name="sectorId" [(ngModel)]="companyData.idSector" placeholder="1">
+        </mat-form-field>
       </form>
 
       <form>
-        <input type="hidden" matInput matAutosizeMinRows=4 name="sectorName" [(ngModel)]="companyData.nameSector" ng-value="Tecnologia">
+        <mat-form-field appearance="outline" class="profile-form-input">
+          <mat-hint> Nombre del sector </mat-hint>
+          <input matInput matAutosizeMinRows=4 required name="sectorName" [(ngModel)]="companyData.nameSector" placeholder="Tecnologia">
+        </mat-form-field>
       </form>
 
       <form>
-        <input type="hidden" matInput matAutosizeMinRows=4 name="sectorDescription" [(ngModel)]="companyData.descriptionSector" ng-value="Sector de tecnologia">
+        <mat-form-field appearance="outline" class="profile-form-input">
+          <mat-hint> Descripción del sector </mat-hint>
+          <input matInput matAutosizeMinRows=4 required name="sectorDescription" [(ngModel)]="companyData.descriptionSector" placeholder="Sector de tecnologia">
+        </mat-form-field>
       </form>
 
       <br>
