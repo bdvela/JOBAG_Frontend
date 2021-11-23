@@ -12,14 +12,13 @@ export class SearchJobsComponent implements OnInit {
   panelOpenState: boolean=false;
   events: string[] = [];
   opened: boolean=false;
-  aea:string=""
   jobsData:Job;
   jobs:Array<Job>=[];
 
   toggle():void{
     this.opened=!this.opened;
   }
-  constructor(private jobs_service : JobsApiService ) { 
+  constructor(private jobs_service : JobsApiService ) {
     this.jobsData={} as Job;
   }
 
@@ -31,9 +30,9 @@ export class SearchJobsComponent implements OnInit {
     this.jobs_service.getAllJobs().subscribe((response: any)=>{
       this.jobs=response.content;
       console.log(this.jobs);
-      
+
     });
   }
-  
+
 
 }

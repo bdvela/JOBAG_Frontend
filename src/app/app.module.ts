@@ -76,6 +76,7 @@ import {JobOfferNewComponentComponent} from "./pages/job-offer-new-component/job
 import { AuthInterceptor } from './helpers/auth.interceptor';
 import { DialogPostulationSendSuccessfullyComponent } from './pages/dialog-postulation-send-successfully/dialog-postulation-send-successfully.component';
 import { YouTubePlayerModule } from "@angular/youtube-player";
+import { ListCompaniesComponent } from "./pages/list-companies/list-companies.component";
 
 
 @NgModule({
@@ -126,6 +127,7 @@ import { YouTubePlayerModule } from "@angular/youtube-player";
     TermsAndConditionsComponent,
     MypostulantionInformationComponent,
     DialogPostulationSendSuccessfullyComponent,
+    ListCompaniesComponent,
 
 
   ],
